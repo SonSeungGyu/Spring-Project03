@@ -11,3 +11,4 @@ public interface MemoRepository extends JpaRepository<Memo, Integer>{
 	
 	
 }
+	
