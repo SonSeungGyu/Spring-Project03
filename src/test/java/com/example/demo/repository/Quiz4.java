@@ -5,17 +5,20 @@ import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.example.demo.entity.Member;
 
 @SpringBootTest
 public class Quiz4 {
-
+	
+	@Autowired
 	MemberRepo repo;
 
 	@Test
 	public void 데이터추가() {
+		
 		List<Member> list = new ArrayList<>();
 		Member mem1 = Member.builder().userId("admin").grade("관리자").password("1234").build();
 		Member mem2 = Member.builder().userId("user").grade("사용자").password("1234").build();

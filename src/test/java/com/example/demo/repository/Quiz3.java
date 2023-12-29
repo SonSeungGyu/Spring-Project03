@@ -46,10 +46,9 @@ public class Quiz3 {
 	@Test
 	public void 데이터수정() {
 		Optional<Order> result = repo.findById(2);
-		if(result.isPresent()) {
 			Order order = result.get();
-			System.out.println(order);
-		}
+			order.setOrderNo(0);
+		
 	}
 	
 	@Test
