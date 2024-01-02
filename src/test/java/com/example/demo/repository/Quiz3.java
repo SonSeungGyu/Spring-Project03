@@ -55,4 +55,23 @@ public class Quiz3 {
 	public void 데이터삭제() {
 		repo.deleteById(3);
 	}
+	
+	@Test
+	public void 검색1() {
+		List<Order> list = repo.sql1("인천");
+		for (Order order : list) {
+			System.out.println(order);
+		}
+	}
+	@Test
+	public void 검색2() {
+		List<Order> list = repo.sql2(LocalDate.of(2023, 07, 01));
+		for (Order order : list) {
+			System.out.println(order);
+		}
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i));
+			
+		}
+	}
 }

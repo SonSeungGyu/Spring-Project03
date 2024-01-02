@@ -77,4 +77,50 @@ public class Quiz2 {
 		repo.deleteAll();
 	}
 
+	@Test
+	public void 검색1() {
+		List<Gift> list = repo.sql1(50000);
+		
+		for (Gift gift  : list) {
+			System.out.println(gift);
+		}
+	}
+	@Test
+	public void 검색2() {
+		List<Gift> list = repo.sql2();
+		
+		for (Gift gift  : list) {
+			System.out.println(gift);
+		}
+	}
+	@Test
+	public void 검색3() {
+		List<Gift> list = repo.sql3();
+		
+		for (Gift gift  : list) {
+			System.out.println(gift);
+		}
+	}
+	
+	@Test
+	public void jpql검색1() {
+		List<Gift> list = repo.get1(50000);
+		for (Gift gift : list) {
+			System.out.println(gift);
+		}
+	}
+	@Test
+	public void jpql검색2() {
+		List<Gift> list = repo.get2();
+		for (Gift gift : list) {
+			System.out.println(gift);
+		}
+	}
+	@Test
+	public void jpql검색3() {
+		List<Gift> list = repo.get3(40000,"생활용품");
+		for (Gift gift : list) {
+			System.out.println(gift);
+		}
+	}
 }

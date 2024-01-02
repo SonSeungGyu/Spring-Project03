@@ -66,4 +66,26 @@ public class BookRepositoryTest {
 	public void 데이터삭제() {
 		repository.deleteById(2);
 	}
+	
+	@Test
+	public void 검색1() {
+		List<Book> list = repository.sql1("스프링부트프로젝트");
+		for (Book book : list) {
+			System.out.println(book);
+		}
+	}
+	@Test
+	public void 검색2() {
+		List<Book> list = repository.sql2();
+		for (Book book : list) {
+			System.out.println(book);
+		}
+	}
+	@Test
+	public void 검색3() {
+		List<Book> list = repository.sql3();
+		for (Book book : list) {
+			System.out.println(book);
+		}
+	}
 }
